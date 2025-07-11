@@ -38,6 +38,16 @@ Apache Spark é uma engine distribuída de processamento de dados em larga escal
 > 💡 **Recomendação**: Prefira Parquet ou Delta para grandes volumes de dados em ambientes analíticos, especialmente se houver necessidade de consultas otimizadas.
 ---
 
+## ⚙️ Iniciando o Spark (PySpark)
+
+```python
+from pyspark.sql import SparkSession
+
+spark = (SparkSession.builder
+    .appName("ETL Spark")
+    .getOrCreate())
+```
+
 ## 🧱 Conceitos Iniciais com RDD
 
 Antes do uso de DataFrames, o Spark operava com RDDs (Resilient Distributed Datasets), uma estrutura de dados distribuída e tolerante a falhas.
