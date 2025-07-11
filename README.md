@@ -24,6 +24,18 @@ Apache Spark é uma engine distribuída de processamento de dados em larga escal
 | Integração com Data Lake   | Alta                               | Alta                             |
 | Performance tuning         | Avançado (Photon, AQE)             | Limitado                         |
 
+## 📚 Tipos de Arquivos Suportados
+
+| Tipo     | Leitura | Escrita | Observações                                            |
+|----------|---------|---------|--------------------------------------------------------|
+| CSV      | ✅      | ✅      | Formato texto simples, bom para interoperabilidade. Lento para grandes volumes. |
+| JSON     | ✅      | ✅      | Suporta estruturas aninhadas. Pode ser pesado para leitura e parsing.          |
+| Parquet  | ✅      | ✅      | Colunar, altamente eficiente em leitura e compressão. Recomendado para análise. |
+| Delta    | ✅      | ✅      | Extensão do Parquet com suporte a transações ACID, versionamento e time travel. Ideal para pipelines. |
+| Avro     | ✅      | ✅      | Compactado, schema embutido. Ótimo para troca de dados entre sistemas.         |
+| ORC      | ✅      | ✅      | Semelhante ao Parquet, mas mais usado no ecossistema Hadoop. Alta compressão.  |
+
+> 💡 **Recomendação**: Prefira Parquet ou Delta para grandes volumes de dados em ambientes analíticos, especialmente se houver necessidade de consultas otimizadas.
 ---
 
 ## 🧱 Conceitos Iniciais com RDD
